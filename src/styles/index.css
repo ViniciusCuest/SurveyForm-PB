@@ -199,3 +199,16 @@ input[type="checkbox"]:checked {
    -moz-appearance: none;
    -webkit-appearance: none;
 }
+
+.textarea {
+   width: 280px;
+   height: 130px;
+   border-radius: 20px;
+   border: 1px solid var(--gray);
+   margin-top: 10px;
+   resize: none;
+   outline: none;
+   padding: 10px 15px;
+}
+
+@media screen and (min-width: 600px) {}
