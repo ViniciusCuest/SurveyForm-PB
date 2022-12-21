@@ -1,0 +1,23 @@
+{
+  "name": "surveyform-pb",
+  "version": "1.0.0",
+  "description": "Survey form using typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViniciusCuest/SurveyForm-PB.git"
+  },
+  "author": "viniciuscuest",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViniciusCuest/SurveyForm-PB/issues"
+  },
+  "homepage": "https://github.com/ViniciusCuest/SurveyForm-PB#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
