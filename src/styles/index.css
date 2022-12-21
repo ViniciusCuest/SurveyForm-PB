@@ -3,6 +3,8 @@
    --green-600-opacity: #3eb25f4d;
    --white: #ffffff;
    --black: #000000;
+
+   --gray: rgba(0, 0, 0, .25);
 }
 
 * {
@@ -36,7 +38,8 @@ body {
 }
 
 .img-cover {
-   width: 70vw; /* View width (VW) to have a average measure compared to Figma Layout*/
+   width: 70vw;
+   /* View width (VW) to have a average measure compared to Figma Layout*/
    margin-left: -50px;
    float: left;
 }
@@ -52,6 +55,12 @@ body {
 .title-cover.medium {
    font-size: 30px;
    line-height: 35.16px;
+}
+
+.title-cover.small {
+   margin: 20px 0 5px 0;
+   font-size: 16px;
+   line-height: 18.75px;
 }
 
 .description {
@@ -71,20 +80,58 @@ body {
 .footer {
    width: 100%;
    display: flex;
+   flex-direction: column;
    align-items: center;
    justify-content: center;
    margin-top: 26px;
+   padding: 0 15%;
 }
 
-.side-buttons { 
+.question-text {
+   font-size: 16px;
+   font-weight: 700;
+   margin: 12px 0 5px 0;
+   line-height: 18.75px;
+}
+
+.form-inputs {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.input-label {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   font-size: 16px;
+   line-height: 21px;
+   color: var(--black);
+}
+
+input[type="radio"] {
+   width: 15px;
+   height: 15px;
+   border-radius: 50%;
+   background-color: var(--green-600-opacity);
+   margin-right: 5px;
+   appearance: none;
+   -moz-appearance: none;
+   -webkit-appearance: none;
+}
+
+input[type="radio"]:checked {
+   background-color: var(--green-600);
+}
+
+.side-buttons {
    width: 100%;
    display: flex;
    flex-direction: row;
    align-items: center;
-   justify-content: space-around;
+   justify-content: space-between;
    margin-top: 10px;
    gap: 10px;
-   padding: 0 30px;
 }
 
 .button {
@@ -94,9 +141,10 @@ body {
    background-color: var(--green-600);
    outline: none;
    border: 0;
+   cursor: pointer;
 }
 
-.button.side{
+.button.side {
    height: 26px;
    width: 146px;
 }
@@ -105,10 +153,34 @@ body {
    font-size: 14px;
 }
 
+.button.large {
+   margin-top: 10px;
+   width: 100%;
+   height: 26px;
+}
+
 .button-title {
    font-size: 20px;
    font-weight: 700;
    color: var(--white);
    line-height: 25.78px;
    text-align: center;
+}
+
+.select-option-component {
+   height: 33px;
+   width: 280px;
+   font-size: 16px;
+   padding: 0 5px 0 25px;
+   background-color: var(--white);
+   border-radius: 20px;
+   outline: none;
+   background-image: url(../assets/arrow-down.svg);
+   background-repeat: no-repeat;
+   background-position-y: 50%;
+   background-position-x: 10px;
+   border: 1px solid var(--gray);
+   appearance: none;
+   -moz-appearance: none;
+   -webkit-appearance: none;
 }

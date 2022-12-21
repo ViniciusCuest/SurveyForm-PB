@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="./src/styles/index.css" />
+   <title>Survey Form | PB</title>
+</head>
+
+<body>
+   <header class="header"></header>
+   <main class="main-container">
+      <figure class="cover-container">
+         <img src="./src/assets/poll.svg" alt="poll-image" class="img-cover" style="width: 80vw; margin: 0;" />
+         <figcaption class="title-cover small">
+            What is the status of your account?
+         </figcaption>
+      </figure>
+      <select class="select-option-component">
+         <img src="./src/assets/poll.svg" />
+         <option>
+            I have not created an account yet.
+         </option>
+         <option>Low level of Funds</option>
+         <option>Average level of Funds</option>
+         <option>High level of Funds</option>
+      </select>
+      <section>
+         <p class="question-text">In which financial markets do you operate ?</p>
+         <form class="form-inputs">
+            <label class="input-label" for="stock"><input type="radio" id="stock" name="radio" /> Stock Market</label>
+            <label class="input-label" for="foreign"><input type="radio" id="foreign" name="radio" /> Foreign
+               Market</label>
+            <label class="input-label" for="commodity"><input type="radio" id="commodity" name="radio" />
+               Commodity</label>
+            <label class="input-label" for="bond"><input type="radio" id="bond" name="radio" /> Bond Market</label>
+            <label class="input-label" for="cryptocurrency"><input type="radio" id="cryptocurrency" name="radio" />
+               Cryptocurrency Market</label>
+         </form>
+      </section>
+   </main>
+   <footer class="footer">
+      <form class="side-buttons">
+         <button class="button side" id="button" onclick="navigation('start')">
+            <p class="button-title side">Back to Home</p>
+         </button>
+         <button class="button side" id="button" onclick="navigation('poll2')">
+            <p class="button-title side">Next   </p>
+         </button>
+      </form>
+      <button class="button large" id="button" onclick="navigation('poll2')">
+         <p class="button-title side">Skip</p>
+      </button>
+   </footer>
+</body>
+<script src="./dist/index.js" type="text/javascript"></script>
+
+</html>
