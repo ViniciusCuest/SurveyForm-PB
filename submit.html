@@ -16,26 +16,35 @@
    <header class="header"></header>
    <main class="main-container">
       <figure class="cover-container">
-         <img src="./src/assets/contact.svg" alt="poll-image" class="img-cover" style="width: 80vw; margin: 0;" />
-         <figcaption class="title-cover small" style="padding: 0 20px;">
-            If you or someone close to you has already made a loss on the investment, write down the details
-         </figcaption>
+         <img src="./src/assets/submit.svg" class="img-cover" style="width: 80vw; margin: 0;" />
       </figure>
       <form>
-         <textarea class="textarea"></textarea>
+         <div class="form-item">
+            <label for="name">
+               Full Name:
+            </label>
+            <input class="input-box" type="text" id="name" placeholder="Nasser Toghiri"/>
+         </div>
+         <div class="form-item">
+            <label for="email">
+               Email:
+            </label>
+            <input class="input-box" type="email" id="email" placeholder="N.Toghiri@Gmail.com"/>
+         </div>
+         <div class="form-item">
+            <label for="age">
+               Age:
+            </label>
+            <input class="input-box" type="number" id="age" placeholder="_ _" />
+         </div>
       </form>
    </main>
    <footer class="footer">
-      <section class="side-buttons">
-         <button class="button side" id="button" onclick="navigation('poll')">
-            <p class="button-title side">Back to Home</p>
-         </button>
-         <button class="button side" id="button" onclick="navigation('submit')">
-            <p class="button-title side">Next </p>
-         </button>
-      </section>
+      <button class="button large" id="button" onclick="navigation('poll2')">
+         <p class="button-title side">Back</p>
+      </button>
       <button class="button large" id="button" onclick="navigation('submit')">
-         <p class="button-title side">Skip</p>
+         <p class="button-title side">Submit</p>
       </button>
    </footer>
 </body>
