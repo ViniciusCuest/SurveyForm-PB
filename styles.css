@@ -2,6 +2,7 @@
    --green-600: #3EB25E;
    --green-600-opacity: #3eb25f4d;
    --white: #ffffff;
+   --black: #000000;
 }
 
 * {
@@ -10,3 +11,25 @@
    margin: 0;
    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+body {
+   background-color: var(--white);
+}
+
+.header {}
+
+.main-container {}
+
+.cover-container {}
+
+.img-cover {}
+
+.title-cover {}
+
+.description {}
+
+.footer {}
+
+.button {}
+
+.button-title {}
