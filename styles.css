@@ -1,0 +1,12 @@
+:root {
+   --green-600: #3EB25E;
+   --green-600-opacity: #3eb25f4d;
+   --white: #ffffff;
+}
+
+* {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+}
