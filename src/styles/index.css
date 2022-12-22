@@ -121,6 +121,10 @@ input[type="radio"] {
    -webkit-appearance: none;
 }
 
+input[type="radio"]:hover {
+   background-color: var(--green-600);
+}
+
 input[type="radio"]:checked {
    background-color: var(--green-600);
    background-image: url('../assets/circle.svg');
@@ -139,6 +143,10 @@ input[type="checkbox"] {
    appearance: none;
    -moz-appearance: none;
    -webkit-appearance: none;
+}
+
+input[type="checkbox"]:hover {
+   background-color: var(--green-600);
 }
 
 input[type="checkbox"]:checked {
@@ -253,6 +261,29 @@ input[type="checkbox"]:checked {
 .input-box::placeholder {
    color: var(--gray);
    font-size: 16px;
+}
+
+.textarea-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+#characters-quantity {
+   color: var(--gray);
+   font-size: 14px;
+   font-weight: 700;
+   align-self: flex-end;
+   margin-right: 10px;
+   margin-top: 5px;
+}
+#desc {
+   color: var(--gray);
+   font-size: 14px;
+   font-weight: 400;
+   align-self: flex-end;
+   margin-right: 10px;
+   margin-top: 5px;
 }
 
 @media screen and (min-width: 600px) {}

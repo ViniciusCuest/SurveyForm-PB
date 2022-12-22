@@ -21,39 +21,39 @@
             What is the status of your account?
          </figcaption>
       </figure>
-      <select class="select-option-component">
+      <select id="select-option" class="select-option-component">
          <img src="./src/assets/poll.svg" />
-         <option>
+         <option value="I have not created an account yet.">
             I have not created an account yet.
          </option>
-         <option>Low level of Funds</option>
-         <option>Average level of Funds</option>
-         <option>High level of Funds</option>
+         <option value="Low level of Funds">Low level of Funds</option>
+         <option value="Average level of Funds">Average level of Funds</option>
+         <option value="High level of Funds">High level of Funds</option>
       </select>
       <section>
          <p class="question-text">In which financial markets do you operate ?</p>
          <form class="form-inputs">
-            <label class="input-label" for="stock"><input type="radio" id="stock" name="radio" /> Stock Market</label>
-            <label class="input-label" for="foreign"><input type="radio" id="foreign" name="radio" /> Foreign
+            <label class="input-label" for="stock"><input type="radio" id="stock" name="radio" value="Stock Market" /> Stock Market</label>
+            <label class="input-label" for="foreign"><input type="radio" id="foreign" name="radio" value="Foreign Market" /> Foreign
                Market</label>
-            <label class="input-label" for="commodity"><input type="radio" id="commodity" name="radio" />
+            <label class="input-label" for="commodity"><input type="radio" id="commodity" name="radio" value="Commodity" />
                Commodity</label>
-            <label class="input-label" for="bond"><input type="radio" id="bond" name="radio" /> Bond Market</label>
-            <label class="input-label" for="cryptocurrency"><input type="radio" id="cryptocurrency" name="radio" />
+            <label class="input-label" for="bond"><input type="radio" id="bond" name="radio" value="Bond Market" /> Bond Market</label>
+            <label class="input-label" for="cryptocurrency"><input type="radio" id="cryptocurrency" name="radio" value="Cryptocurrency Market" />
                Cryptocurrency Market</label>
          </form>
       </section>
    </main>
    <footer class="footer">
       <section class="side-buttons">
-         <button class="button side" id="button" onclick="navigation('start')">
-            <p class="button-title side">Back to Home</p>
+         <button class="button side" id="back">
+            <p class="button-title side">Back</p>
          </button>
-         <button class="button side" id="button" onclick="navigation('poll2')">
-            <p class="button-title side">Next   </p>
+         <button class="button side" id="next">
+            <p class="button-title side">Next</p>
          </button>
       </section>
-      <button class="button large" id="button" onclick="navigation('poll2')">
+      <button class="button large" id="button">
          <p class="button-title side">Skip</p>
       </button>
    </footer>

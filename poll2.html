@@ -21,13 +21,13 @@
             How do you decide to invest?
          </figcaption>
       </figure>
-      <select class="select-option-component">
-         <option>
+      <select id="select-option" class="select-option-component">
+         <option value="I have not invested yet.">
             I have not invested yet.
          </option>
-         <option>Low level of Funds</option>
-         <option>Average level of Funds</option>
-         <option>High level of Funds</option>
+         <option value="Low level of Funds">Low level of Funds</option>
+         <option value="Average level of Funds">Average level of Funds</option>
+         <option value="High level of Funds">High level of Funds</option>
       </select>
       <section>
          <p class="question-text">What resources have you used or are you using for your training ?</p>
@@ -46,10 +46,10 @@
    </main>
    <footer class="footer">
       <section class="side-buttons">
-         <button class="button side" id="button" onclick="navigation('poll')">
-            <p class="button-title side">Back to Home</p>
+         <button class="button side" id="back" onclick="navigation('poll')">
+            <p class="button-title side">Back</p>
          </button>
-         <button class="button side" id="button" onclick="navigation('details')">
+         <button class="button side" id="next">
             <p class="button-title side">Next </p>
          </button>
       </section>

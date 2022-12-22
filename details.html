@@ -21,16 +21,17 @@
             If you or someone close to you has already made a loss on the investment, write down the details
          </figcaption>
       </figure>
-      <form>
-         <textarea class="textarea"></textarea>
+      <form class="textarea-container">
+         <textarea id="textarea" class="textarea" maxlength="120"></textarea>
+         <p id="desc">Characters: <span id="characters-quantity"></span></p>
       </form>
    </main>
    <footer class="footer">
       <section class="side-buttons">
-         <button class="button side" id="button" onclick="navigation('poll')">
-            <p class="button-title side">Back to Home</p>
+         <button class="button side" id="back">
+            <p class="button-title side">Back</p>
          </button>
-         <button class="button side" id="button" onclick="navigation('submit')">
+         <button class="button side" id="next">
             <p class="button-title side">Next </p>
          </button>
       </section>
