@@ -82,17 +82,8 @@ buttonSubmit?.addEventListener('click', (): void => {
       comment_detail: String(localStorage.getItem('details'))
    };
 
-   console.log(localStorage.getItem('details'));
-
-
-   ['poll', 'poll2', 'details'].map(item => {
-      return localStorage.getItem(item)?.startsWith('{', 0)
-         ? JSON.parse(String(localStorage.getItem(item)))
-         : localStorage.getItem(item)
-   });
-
-   //console.log({...data});
-   //localStorage.clear();
+   localStorage.clear();
+   console.log(retrievedData);
 });
 
 

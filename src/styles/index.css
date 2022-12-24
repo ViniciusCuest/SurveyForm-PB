@@ -4,6 +4,7 @@
    --white: #ffffff;
    --black: #000000;
 
+   --yellow: #FFFF7D;
    --gray: rgba(0, 0, 0, .25);
 }
 
@@ -21,7 +22,14 @@ body {
 }
 
 .header {
-   margin-top: 12%;
+   margin-top: 10%;
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
 }
 
 .main-container {
@@ -39,17 +47,24 @@ body {
 
 .img-cover {
    width: 70vw;
+   height: auto;
    /* View width (VW) to have a average measure compared to Figma Layout*/
-   margin-left: -50px;
+   margin-left: -16vw;
    float: left;
 }
 
+.img-cover.vertical {
+   height: auto;
+   width: 90vw;
+   margin-left: 0;
+}
+
 .title-cover {
-   font-size: 48px;
+   font-size: 13vw;
    font-weight: 700;
    line-height: 62.11px;
    text-align: center;
-   margin: 20px 0;
+   margin: 10px 0 20px 0;
 }
 
 .title-cover.medium {
@@ -64,17 +79,17 @@ body {
 }
 
 .description {
-   font-size: 22px;
+   font-size: 6vw;
    font-weight: 700;
-   line-height: 28.13px;
+   line-height: 7.5vw;
    text-align: center;
+   margin-top: 1vh;
 }
 
 .long-description {
    font-size: 18px;
    line-height: 28.13px;
    text-align: center;
-   padding: 0 15px;
 }
 
 .footer {
@@ -84,6 +99,7 @@ body {
    align-items: center;
    justify-content: center;
    margin-top: 26px;
+   margin-bottom: 30px;
    padding: 0 15%;
 }
 
@@ -92,6 +108,7 @@ body {
    font-weight: 700;
    margin: 12px 0 5px 0;
    line-height: 18.75px;
+   text-align: center;
 }
 
 .form-inputs {
@@ -168,22 +185,35 @@ input[type="checkbox"]:checked {
 }
 
 .button {
-   width: 200px;
-   height: 36px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 48vw;
+   height: 9.2vw;
    border-radius: 36px;
    background-color: var(--green-600);
    outline: none;
    border: 0;
    cursor: pointer;
+   margin-top: 3vh;
 }
 
+.button:hover {
+   background-color: var(--yellow);
+}
+
+.button:hover>.button-title {
+   color: var(--black);
+}
+
+
 .button.side {
-   height: 26px;
-   width: 146px;
+   height: 4vh;
+   width: 35vw;
 }
 
 .button-title.side {
-   font-size: 14px;
+   font-size: 3.2vw;
 }
 
 .button.large {
@@ -193,7 +223,7 @@ input[type="checkbox"]:checked {
 }
 
 .button-title {
-   font-size: 20px;
+   font-size: 5vw;
    font-weight: 700;
    color: var(--white);
    line-height: 25.78px;
@@ -277,6 +307,7 @@ input[type="checkbox"]:checked {
    margin-right: 10px;
    margin-top: 5px;
 }
+
 #desc {
    color: var(--gray);
    font-size: 14px;
@@ -286,4 +317,135 @@ input[type="checkbox"]:checked {
    margin-top: 5px;
 }
 
-@media screen and (min-width: 600px) {}
+@media screen and (min-width: 768px) {
+   .wrapper {
+      width: 100%;
+      height: 100vh;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+   }
+
+   .main-container {
+      flex-direction: row;
+      padding: 0;
+   }
+
+   .title-cover {
+      line-height: normal;
+      font-size: 6.2vw;
+   }
+
+   .title-cover.medium {
+      font-size: 2.5vw;
+      line-height: normal;
+      padding: 0 25%;
+   }
+
+   .description {
+      font-size: 2vw;
+      line-height: normal;
+      margin-top: -.5vh;
+   }
+
+   .long-description {
+      font-size: 1.6vw;
+      line-height: normal;
+      padding: 0 13.2vw;
+   }
+
+   .img-cover {
+      height: 80vh;
+      width: auto;
+      margin-left: 5%;
+   }
+
+   .img-cover.vertical {
+      margin-left: 10vw;
+      width: 38vw;
+   }
+
+   .button {
+      height: 5vh;
+      width: 18vw;
+      margin-top: 8vh;
+   }
+
+   .button-title {
+      font-size: 1.8vw;
+   }
+
+   .button.side {
+      width: 12vw;
+      height: 4.2vh;
+   }
+
+   .button-title.side {
+      font-size: 1vw;
+   }
+
+   .side-buttons {
+      width: auto;
+      margin: 0;
+      justify-content: center;
+      gap: 2vw;
+   }
+
+   .cover-container {
+      flex-direction: row;
+      justify-content: center;
+   }
+
+   .footer {
+      width: auto;
+      padding: 0;
+      margin: 0;
+   }
+}
+
+/*
+@media screen and (min-width: 1440px) { 
+   .img-cover {
+      height: 80vh;
+      width: auto;
+      margin-left: 5%;
+   }
+   .footer {
+      margin-right: 5vw;
+   }
+}
+*/
+/*
+@media screen and (min-width: 2080px) {
+   .description {
+      margin-top: 2vw;
+      font-size: 2vw;
+   }
+
+   .button {
+      margin-top: 2.8vw;
+      width: 12vw;
+      height: 2vw;
+   }
+
+   .title-cover {
+      font-size: 4vw;
+   }
+
+   .button-title {
+      font-size: 1.3vw;
+   }
+}*/
+
+/* Galaxy Fold adaptation */
+@media screen and (max-width: 300px) {}
+
+p::selection {
+   color: var(--black);
+   background-color: var(--yellow);
+}
+
+h1::selection {
+   color: var(--black);
+   background-color: var(--yellow);
+}

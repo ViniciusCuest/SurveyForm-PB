@@ -13,21 +13,23 @@
 </head>
 
 <body>
-   <header class="header"></header>
-   <main class="main-container">
-      <figure class="cover-container">
-         <img src="./src/assets/zero.svg" class="img-cover" />
+   <main class="wrapper">
+      <header class="header"></header>
+      <main class="main-container">
+         <figure class="cover-container">
+            <img src="./src/assets/zero.svg" class="img-cover" />
+         </figure>
+      </main>
+      <footer class="footer">
          <figcaption class="title-cover">Welcome</figcaption>
-      </figure>
-      <p class="description">
-         Thanks for participating in the poll
-      </p>
+         <p class="description">
+            Thanks for participating in the poll
+         </p>
+         <button class="button" id="button" onclick="navigation('start')">
+            <p class="button-title">Let's go</p>
+         </button>
+      </footer>
    </main>
-   <footer class="footer">
-      <button class="button" id="button" onclick="navigation('start')">
-         <p class="button-title">Let's go</p>
-      </button>
-   </footer>
 </body>
 <script src="./dist/index.js" type="text/javascript"></script>
 

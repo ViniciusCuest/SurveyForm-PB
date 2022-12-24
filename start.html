@@ -13,29 +13,31 @@
 </head>
 
 <body>
-   <header class="header"></header>
-   <main class="main-container">
-      <figure class="cover-container">
-         <img src="./src/assets/start.svg" class="img-cover" style="width: 80vw; margin: 0;" />
-         <figcaption class="title-cover medium">Necessities of working in
+   <main class="wrapper">
+      <header class="header"></header>
+      <main class="main-container">
+         <figure class="cover-container">
+            <img src="./src/assets/start.svg" class="img-cover vertical" />
+         </figure>
+      </main>
+      <footer class="footer">
+         <h1 class="title-cover medium">Necessities of working in
             financial markets
-            </figcaption>
-      </figure>
-      <p class="long-description">
-         This research is to find the reasons for the failure of people in financial markets. The results of this survey will be emailed to you along with the analysis of our experienced experts.
-      </p>
+         </h1>
+         <p class="long-description">
+            This research is to find the reasons for the failure of people in financial markets. The results of this
+            survey will be emailed to you along with the analysis of our experienced experts.
+         </p>
+         <section class="side-buttons" action="" target="_blank">
+            <button type="button" class="button side" id="back">
+               <p class="button-title side">Back to Home</p>
+            </button>
+            <button type="button" class="button side" id="button" onclick="navigation('poll');">
+               <p class="button-title side">Fill out the Form</p>
+            </button>
+         </section>
+      </footer>
    </main>
-   <footer class="footer">
-      <section class="side-buttons"  action="" target="_blank">
-         <button type="button" class="button side" id="back">
-            <p class="button-title side">Back to Home</p> 
-         </button>
-         <button type="button" class="button side" id="button" onclick="navigation('poll');">
-            <p class="button-title side">Fill out the Form</p>
-         </button>
-      </section>
-
-   </footer>
 </body>
 <script src="./dist/index.js" type="text/javascript"></script>
 

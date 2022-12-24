@@ -66,13 +66,8 @@ buttonSubmit === null || buttonSubmit === void 0 ? void 0 : buttonSubmit.addEven
         resourses: (_d = JSON.parse(String(localStorage.getItem('poll2')))) === null || _d === void 0 ? void 0 : _d.resourses,
         comment_detail: String(localStorage.getItem('details'))
     };
-    console.log(localStorage.getItem('details'));
-    ['poll', 'poll2', 'details'].map(item => {
-        var _a;
-        return ((_a = localStorage.getItem(item)) === null || _a === void 0 ? void 0 : _a.startsWith('{', 0))
-            ? JSON.parse(String(localStorage.getItem(item)))
-            : localStorage.getItem(item);
-    });
+    localStorage.clear();
+    console.log(retrievedData);
 });
 function navigation(route) {
     window.location.href = `${route}.html`;
