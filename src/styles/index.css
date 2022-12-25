@@ -120,10 +120,10 @@ body {
 }
 
 .question-text {
-   font-size: 5vw;
+   font-size: 4.6vw;
    font-weight: 700;
    margin: 12px 0 5px 0;
-   line-height: 18.75px;
+   line-height: normal;
    text-align: center;
 }
 
@@ -137,22 +137,27 @@ body {
    display: flex;
    flex-direction: row;
    align-items: center;
-   font-size: 16px;
-   line-height: 21px;
+   font-size: 4.6vw;
+   line-height: normal;
+   margin-top: 1.6vw;
    color: var(--black);
    cursor: pointer;
 }
 
 input[type="radio"] {
-   width: 15px;
-   height: 15px;
+   width: 4vw;
+   height: 4vw;
    border-radius: 50%;
    background-color: var(--green-600-opacity);
-   margin-right: 5px;
+   margin-right: 1.2vw;
    appearance: none;
    cursor: pointer;
    -moz-appearance: none;
    -webkit-appearance: none;
+}
+
+.textarea:hover {
+   outline: auto;
 }
 
 input[type="radio"]:hover {
@@ -163,16 +168,17 @@ input[type="radio"]:checked {
    background-color: var(--green-600);
    background-image: url('../assets/circle.svg');
    background-repeat: no-repeat;
-   background-position: 50%;
-   background-size: 6px;
+   background-position-y: 50%;
+   background-position-x: 50%;
+   background-size: 1.6vw;
 }
 
 input[type="checkbox"] {
-   width: 14px;
-   height: 14px;
-   border-radius: 2px;
+   width: 4vw;
+   height: 4vw;
+   border-radius: 2.5px;
    background-color: var(--green-600-opacity);
-   margin-right: 5px;
+   margin-right: 1.2vw;
    cursor: pointer;
    appearance: none;
    -moz-appearance: none;
@@ -186,7 +192,7 @@ input[type="checkbox"]:hover {
 input[type="checkbox"]:checked {
    background-image: url('../assets/check.svg');
    background-position: 50%;
-   background-size: 10px;
+   background-size: 2.5vw;
    background-repeat: no-repeat;
    background-color: var(--green-600);
 }
@@ -234,17 +240,18 @@ input[type="checkbox"]:checked {
 }
 
 .button.large {
-   margin-top: 10px;
+   margin-top: 1.4vh;
    width: 100%;
    height: 26px;
 }
 
 .button.large3 {
+   margin-top: 1.4vh;
    width: 100%;
 }
 
 .button-title {
-   font-size: 5vw;
+   font-size: 5.2vw;
    font-weight: 700;
    color: var(--white);
    line-height: 25.78px;
@@ -252,9 +259,9 @@ input[type="checkbox"]:checked {
 }
 
 .select-option-component {
-   height: 33px;
-   width: 280px;
-   font-size: 16px;
+   height: 10vw;
+   width: 90vw;
+   font-size: 5.2vw;
    padding: 0 5px 0 25px;
    background-color: var(--white);
    border-radius: 20px;
@@ -270,8 +277,8 @@ input[type="checkbox"]:checked {
 }
 
 .textarea {
-   width: 280px;
-   height: 130px;
+   width: 80vw;
+   height: 18vh;
    border-radius: 20px;
    border: 1px solid var(--gray);
    margin-top: 10px;
@@ -310,6 +317,11 @@ input[type="checkbox"]:checked {
    padding: 0 10px;
 }
 
+.input-box.error {
+   animation: shake 900ms;
+   border: 2px solid var(--error);
+}
+
 .input-box#age {
    width: 110px;
 }
@@ -323,6 +335,35 @@ input[type="checkbox"]:checked {
    display: flex;
    flex-direction: column;
    justify-content: center;
+}
+
+.success-modal {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   top: 0;
+   right: 0;
+   z-index: 5;
+   background-color: var(--green-600);
+   width: 60vw;
+   height: 8vh;
+   border-radius: 20px;
+}
+
+.double-button {
+   margin-top: 2vh;
+   width: 100%;
+}
+
+.effect {
+   animation: modal 1s;
+}
+
+#sucess-text {
+   font-size: 16px;
+   color: var(--white);
+   text-align: center;
 }
 
 #characters-quantity {
@@ -449,6 +490,10 @@ input[type="checkbox"]:checked {
       line-height: normal;
    }
 
+   .double-button {
+      margin-top: 4vh;
+   }
+
    .textarea {
       width: 32vw;
       height: 30vh;
@@ -458,6 +503,10 @@ input[type="checkbox"]:checked {
       font-size: 1.4vw;
       line-height: normal;
       text-align: left;
+   }
+
+   .select-option-component:hover {
+      outline: auto;
    }
 
    .select-option-component {
@@ -488,6 +537,12 @@ input[type="checkbox"]:checked {
       margin-right: .5vw;
    }
 
+   input[type="number"]::-webkit-inner-spin-button,
+   input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      appearance: none;
+      margin: 0;
+   }
 
    input[type="checkbox"]:checked {
       background-position: 50%;
@@ -579,6 +634,10 @@ input[type="checkbox"]:checked {
       width: auto;
    }
 
+   .form-con {
+      margin-top: 4vh;
+   }
+
    .footer.form2 {
       width: 100%;
       display: flex;
@@ -590,50 +649,77 @@ input[type="checkbox"]:checked {
       padding-right: 15%;
       padding-left: 12%;
    }
+
+   .footer.form4 {
+      padding-right: 10%;
+      padding-left: 9%;
+   }
+   .footer.form5 {
+      margin-right: 7%;
+      padding-right: 10%;
+      padding-left: 9%;
+   }
+
+   .form-item>label {
+      font-size: 1.4vw;
+      line-height: normal;
+      margin-bottom: 1.6vh;
+      margin-top: 1.6vh;
+   }
+
+   .form-item>.input-box {
+      height: 5.6vh;
+      width: 28vw;
+      font-size: 1.4vw;
+      padding: 0 .6vw;
+   }
+
+   .form-item>.input-box::placeholder {
+      font-size: 1.2vw;
+   }
+
+   .input-box#age {
+      width: 7.2vw;
+   }
+
+   .success-modal {
+      top: 0;
+      transform: translateX(100vw);
+      z-index: 5;
+      margin-top: 2vh;
+      width: 20vw;
+      height: 8vh;
+   }
+
+   .effect {
+      animation: modal 2.2s ease-out;
+   }
+
+   #sucess-text {
+      font-size: 1.2vw;
+      color: var(--white);
+      text-align: center;
+   }
 }
 
-/*
-@media screen and (min-width: 1440px) { 
-   .img-cover {
-      height: 80vh;
-      width: auto;
-      margin-left: 5%;
-   }
-   .footer {
-      margin-right: 5vw;
-   }
-}
-*/
-/*
-@media screen and (min-width: 2080px) {
-   .description {
-      margin-top: 2vw;
-      font-size: 2vw;
-   }
-
-   .button {
-      margin-top: 2.8vw;
-      width: 12vw;
-      height: 2vw;
-   }
-
-   .title-cover {
-      font-size: 4vw;
-   }
-
-   .button-title {
-      font-size: 1.3vw;
-   }
-}*/
-
-p::selection {
+.form-item>.input-box::selection, p::selection, label::selection, h1::selection {
    color: var(--black);
    background-color: var(--yellow);
 }
 
-h1::selection {
-   color: var(--black);
-   background-color: var(--yellow);
+@keyframes modal {
+   0% {
+      transform: translateX(20vw);
+   }
+
+   50% {
+      transform: translateX(-2vw);
+   }
+
+   100% {
+      opacity: 0;
+      transform: translateX(-2vw);
+   }
 }
 
 @keyframes shake {

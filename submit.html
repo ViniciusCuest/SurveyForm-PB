@@ -13,41 +13,50 @@
 </head>
 
 <body>
-   <header class="header"></header>
-   <main class="main-container">
-      <figure class="cover-container">
-         <img src="./src/assets/submit.svg" class="img-cover" style="width: 80vw; margin: 0;" />
-      </figure>
-      <form>
-         <div class="form-item">
-            <label for="name">
-               Full Name:
-            </label>
-            <input class="input-box" type="text" id="name" placeholder="Nasser Toghiri"/>
-         </div>
-         <div class="form-item">
-            <label for="email">
-               Email:
-            </label>
-            <input class="input-box" type="email" id="email" placeholder="N.Toghiri@Gmail.com"/>
-         </div>
-         <div class="form-item">
-            <label for="age">
-               Age:
-            </label>
-            <input class="input-box" type="number" id="age" maxlength="2" placeholder="_ _" />
-         </div>
-      </form>
+   <main class="wrapper" id="wrapper">
+      <header class="header"></header>
+      <main class="main-container">
+         <figure class="cover-container">
+            <img src="./src/assets/submit.svg" class="img-cover vertical" />
+         </figure>
+      </main>
+      <footer class="footer form4">
+         <form class="form-con">
+            <div class="form-item">
+               <label for="name">
+                  Full Name:
+               </label>
+               <input class="input-box" type="text" id="name" placeholder="Nasser Toghiri" />
+            </div>
+            <div class="form-item">
+               <label for="email">
+                  Email:
+               </label>
+               <input class="input-box" type="email" id="email" placeholder="N.Toghiri@Gmail.com" />
+            </div>
+            <div class="form-item">
+               <label for="age">
+                  Age:
+               </label>
+               <input class="input-box" type="number" id="age" maxlength="2" placeholder="_ _" />
+            </div>
+         </form>
+         <section class="double-button">
+            <button class="button large" id="back">
+               <p class="button-title side">Back</p>
+            </button>
+            <button class="button large" id="submit">
+               <p class="button-title side">Submit</p>
+            </button>
+         </section>
+      </footer>
    </main>
-   <footer class="footer">
-      <button class="button large" id="back">
-         <p class="button-title side">Back</p>
-      </button>
-      <button class="button large" id="submit">
-         <p class="button-title side">Submit</p>
-      </button>
-   </footer>
 </body>
 <script src="./dist/index.js" type="text/javascript"></script>
 
 </html>
+
+<!-- 
+
+
+-->

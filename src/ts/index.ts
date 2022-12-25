@@ -84,12 +84,44 @@ buttonNext?.addEventListener('click', (): void => {
             resourses: data,
             invest_status: select?.value
          }));
-      navigation('details');
+         
+      if (data.length)
+         navigation('details');
+
       return;
    }
 });
 
 buttonSubmit?.addEventListener('click', (): void => {
+
+   const modal = document.getElementById('success') as HTMLDivElement;
+   const modalText = document.getElementById('sucess-text') as HTMLParagraphElement;
+
+   if (!full_name.value) {
+      full_name.classList.add('error');
+      setTimeout((): void => {
+         full_name.classList.remove('error');
+      }, 1000);
+   }
+
+   if (!email.value) {
+      email.classList.add('error');
+      setTimeout((): void => {
+         email.classList.remove('error');
+      }, 1000);
+   }
+
+   if (!age.value) {
+      age.classList.add('error');
+      setTimeout((): void => {
+         age.classList.remove('error');
+      }, 1000);
+   }
+
+   if (!full_name.value || !email.value || !age.value)
+      return;
+
+
 
    let retrievedData: DataProps = {
       full_name: String(full_name?.value),
@@ -101,8 +133,19 @@ buttonSubmit?.addEventListener('click', (): void => {
       resourses: JSON.parse(String(localStorage.getItem('poll2')))?.resourses,
       comment_detail: String(localStorage.getItem('details'))
    };
+
+
+   document.createElement(
+      `<section id="success effect" class="success-modal">
+         <p id="sucess-text">Be welcome, <b>${retrievedData.full_name.split(' ')[0]}!</></p>
+      </section>`
+   );
+
+   //modalText.innerHTML = `Be welcome, <b>${retrievedData.full_name.split(' ')[0]}!</>`;
+   //modal.classList.add('effect');
+
    localStorage.clear();
-   
+
 });
 
 

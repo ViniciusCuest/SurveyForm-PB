@@ -57,12 +57,35 @@ buttonNext === null || buttonNext === void 0 ? void 0 : buttonNext.addEventListe
             resourses: data,
             invest_status: select === null || select === void 0 ? void 0 : select.value
         }));
-        navigation('details');
+        if (data.length)
+            navigation('details');
         return;
     }
 });
 buttonSubmit === null || buttonSubmit === void 0 ? void 0 : buttonSubmit.addEventListener('click', () => {
     var _a, _b, _c, _d;
+    const modal = document.getElementById('success');
+    const modalText = document.getElementById('sucess-text');
+    if (!full_name.value) {
+        full_name.classList.add('error');
+        setTimeout(() => {
+            full_name.classList.remove('error');
+        }, 1000);
+    }
+    if (!email.value) {
+        email.classList.add('error');
+        setTimeout(() => {
+            email.classList.remove('error');
+        }, 1000);
+    }
+    if (!age.value) {
+        age.classList.add('error');
+        setTimeout(() => {
+            age.classList.remove('error');
+        }, 1000);
+    }
+    if (!full_name.value || !email.value || !age.value)
+        return;
     let retrievedData = {
         full_name: String(full_name === null || full_name === void 0 ? void 0 : full_name.value),
         email: String(email === null || email === void 0 ? void 0 : email.value),
@@ -73,6 +96,9 @@ buttonSubmit === null || buttonSubmit === void 0 ? void 0 : buttonSubmit.addEven
         resourses: (_d = JSON.parse(String(localStorage.getItem('poll2')))) === null || _d === void 0 ? void 0 : _d.resourses,
         comment_detail: String(localStorage.getItem('details'))
     };
+    document.createElement(`<section id="success effect" class="success-modal">
+         <p id="sucess-text">Be welcome, <b>${retrievedData.full_name.split(' ')[0]}!</></p>
+      </section>`);
     localStorage.clear();
 });
 function navigation(route) {
