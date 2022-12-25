@@ -13,32 +13,34 @@
 </head>
 
 <body>
-   <header class="header"></header>
-   <main class="main-container">
-      <figure class="cover-container">
-         <img src="./src/assets/contact.svg" alt="poll-image" class="img-cover" style="width: 80vw; margin: 0;" />
-         <figcaption class="title-cover small" style="padding: 0 20px;">
+   <main class="wrapper">
+      <header class="header"></header>
+      <main class="main-container">
+         <figure class="cover-container">
+            <img src="./src/assets/contact.svg" alt="poll-image" class="img-cover vertical" />
+         </figure>
+      </main>
+      <footer class="footer">
+         <figcaption class="title-cover large">
             If you or someone close to you has already made a loss on the investment, write down the details
          </figcaption>
-      </figure>
-      <form class="textarea-container">
-         <textarea id="textarea" class="textarea" maxlength="120"></textarea>
-         <p id="desc">Characters: <span id="characters-quantity"></span></p>
-      </form>
+         <form class="textarea-container">
+            <textarea id="textarea" class="textarea" maxlength="120"></textarea>
+            <p id="desc">Characters: <span id="characters-quantity"></span></p>
+         </form>
+         <section class="side-buttons">
+            <button class="button side" id="back">
+               <p class="button-title side">Back</p>
+            </button>
+            <button class="button side" id="next">
+               <p class="button-title side">Next</p>
+            </button>
+         </section>
+         <button class="button large3" id="button" onclick="navigation('submit')">
+            <p class="button-title side">Skip</p>
+         </button>
+      </footer>
    </main>
-   <footer class="footer">
-      <section class="side-buttons">
-         <button class="button side" id="back">
-            <p class="button-title side">Back</p>
-         </button>
-         <button class="button side" id="next">
-            <p class="button-title side">Next </p>
-         </button>
-      </section>
-      <button class="button large" id="button" onclick="navigation('submit')">
-         <p class="button-title side">Skip</p>
-      </button>
-   </footer>
 </body>
 <script src="./dist/index.js" type="text/javascript"></script>
 

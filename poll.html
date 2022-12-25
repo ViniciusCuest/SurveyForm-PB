@@ -13,50 +13,57 @@
 </head>
 
 <body>
-   <header class="header"></header>
-   <main class="main-container">
-      <figure class="cover-container">
-         <img src="./src/assets/poll.svg" alt="poll-image" class="img-cover" style="width: 80vw; margin: 0;" />
-         <figcaption class="title-cover small">
+   <main class="wrapper form">
+      <header class="header"></header>
+      <main class="main-container">
+         <figure class="cover-container form">
+            <img src="./src/assets/poll.svg" alt="poll-image" class="img-cover vertical form" />
+         </figure>
+      </main>
+      <footer class="footer form">
+         <figcaption class="title-cover small form">
             What is the status of your account?
          </figcaption>
-      </figure>
-      <select id="select-option" class="select-option-component">
-         <img src="./src/assets/poll.svg" />
-         <option value="I have not created an account yet.">
-            I have not created an account yet.
-         </option>
-         <option value="Low level of Funds">Low level of Funds</option>
-         <option value="Average level of Funds">Average level of Funds</option>
-         <option value="High level of Funds">High level of Funds</option>
-      </select>
-      <section>
-         <p class="question-text">In which financial markets do you operate ?</p>
-         <form class="form-inputs">
-            <label class="input-label" for="stock"><input type="radio" id="stock" name="radio" value="Stock Market" /> Stock Market</label>
-            <label class="input-label" for="foreign"><input type="radio" id="foreign" name="radio" value="Foreign Market" /> Foreign
-               Market</label>
-            <label class="input-label" for="commodity"><input type="radio" id="commodity" name="radio" value="Commodity" />
-               Commodity</label>
-            <label class="input-label" for="bond"><input type="radio" id="bond" name="radio" value="Bond Market" /> Bond Market</label>
-            <label class="input-label" for="cryptocurrency"><input type="radio" id="cryptocurrency" name="radio" value="Cryptocurrency Market" />
-               Cryptocurrency Market</label>
-         </form>
-      </section>
+         <select id="select-option" class="select-option-component form">
+            <img src="./src/assets/poll.svg" />
+            <option value="I have not created an account yet.">
+               I have not created an account yet.
+            </option>
+            <option value="Low level of Funds">Low level of Funds</option>
+            <option value="Average level of Funds">Average level of Funds</option>
+            <option value="High level of Funds">High level of Funds</option>
+         </select>
+         <section>
+            <p class="question-text">In which financial markets do you operate ?</p>
+            <form class="form-inputs">
+               <label class="input-label" for="stock"><input type="radio" id="stock" name="radio"
+                     value="Stock Market" /> Stock Market</label>
+               <label class="input-label" for="foreign"><input type="radio" id="foreign" name="radio"
+                     value="Foreign Market" /> Foreign
+                  Market</label>
+               <label class="input-label" for="commodity"><input type="radio" id="commodity" name="radio"
+                     value="Commodity" />
+                  Commodity</label>
+               <label class="input-label" for="bond"><input type="radio" id="bond" name="radio" value="Bond Market" />
+                  Bond Market</label>
+               <label class="input-label" for="cryptocurrency"><input type="radio" id="cryptocurrency" name="radio"
+                     value="Cryptocurrency Market" />
+                  Cryptocurrency Market</label>
+            </form>
+         </section>
+         <section class="side-buttons">
+            <button class="button side" id="back">
+               <p class="button-title side">Back</p>
+            </button>
+            <button class="button side" id="next">
+               <p class="button-title side">Next</p>
+            </button>
+         </section>
+         <button class="button large" id="button">
+            <p class="button-title side">Skip</p>
+         </button>
+      </footer>
    </main>
-   <footer class="footer">
-      <section class="side-buttons">
-         <button class="button side" id="back">
-            <p class="button-title side">Back</p>
-         </button>
-         <button class="button side" id="next">
-            <p class="button-title side">Next</p>
-         </button>
-      </section>
-      <button class="button large" id="button">
-         <p class="button-title side">Skip</p>
-      </button>
-   </footer>
 </body>
 <script src="./dist/index.js" type="text/javascript"></script>
 

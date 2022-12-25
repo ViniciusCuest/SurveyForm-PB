@@ -1,3 +1,14 @@
+type DataProps = {
+   full_name: string;
+   email: string;
+   age: number;
+   markets: string[];
+   account_status: string;
+   invest_status: string;
+   resourses: string;
+   comment_detail: string;
+}
+
 const buttonSubmit = document.getElementById('submit') as HTMLButtonElement | undefined;
 const buttonBack = document.getElementById('back')! as HTMLButtonElement | undefined;
 const buttonNext = document.getElementById('next')! as HTMLButtonElement | undefined;
@@ -34,6 +45,15 @@ buttonNext?.addEventListener('click', (): void => {
    const select = document.getElementById('select-option') as HTMLSelectElement;
 
    if (textarea) {
+
+      if (!textarea.value.length) {
+         textarea.classList.add('error');
+         setTimeout((): void => {
+            textarea.classList.remove('error');
+         }, 500);
+         return;
+      }
+
       localStorage.setItem('details', String(textarea?.value));
       navigation('submit');
       return;
@@ -71,19 +91,18 @@ buttonNext?.addEventListener('click', (): void => {
 
 buttonSubmit?.addEventListener('click', (): void => {
 
-   let retrievedData: object = {
+   let retrievedData: DataProps = {
       full_name: String(full_name?.value),
       email: String(email?.value),
-      age: String(age?.value),
+      age: Number(age?.value),
       markets: JSON.parse(String(localStorage.getItem('poll')))?.markets,
       account_status: JSON.parse(String(localStorage.getItem('poll')))?.status,
       invest_status: JSON.parse(String(localStorage.getItem('poll2')))?.invest_status,
       resourses: JSON.parse(String(localStorage.getItem('poll2')))?.resourses,
       comment_detail: String(localStorage.getItem('details'))
    };
-
    localStorage.clear();
-   console.log(retrievedData);
+   
 });
 
 

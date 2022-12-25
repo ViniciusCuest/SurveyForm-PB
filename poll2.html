@@ -13,55 +13,102 @@
 </head>
 
 <body>
-   <header class="header"></header>
-   <main class="main-container">
-      <figure class="cover-container">
-         <img src="./src/assets/poll2.svg" alt="poll-image" class="img-cover" style="width: 80vw; margin: 0;" />
-         <figcaption class="title-cover small">
-            How do you decide to invest?
+   <main class="wrapper form2">
+      <header class="header"></header>
+      <main class="main-container">
+         <figure class="cover-container form2">
+            <img src="./src/assets/poll2.svg" alt="poll-image" class="img-cover vertical form" />
+         </figure>
+      </main>
+      <footer class="footer form2">
+         <figcaption class="title-cover small2 form">
+            How do you decide to invest ?
          </figcaption>
-      </figure>
-      <select id="select-option" class="select-option-component">
-         <option value="I have not invested yet.">
-            I have not invested yet.
-         </option>
-         <option value="Low level of Funds">Low level of Funds</option>
-         <option value="Average level of Funds">Average level of Funds</option>
-         <option value="High level of Funds">High level of Funds</option>
-      </select>
-      <section style="padding: 0 20px">
-         <p class="question-text">What resources have you used or are you using for your training ?</p>
-         <form class="form-inputs" style="padding: 0 15px;">
-            <label class="input-label" for="books"><input type="checkbox" id="books" name="checkbox"
-                  value="Books and Articles" /> Books and
-               Articles</label>
-            <label class="input-label" for="tutorial"><input type="checkbox" id="tutorial" name="checkbox"
-                  value="Youtube Tutorial Videos" /> Youtube
-               Tutorial Videos</label>
-            <label class="input-label" for="courses"><input type="checkbox" id="courses" name="checkbox"
-                  value="Online or Face to Face Courses" /> Online or
-               Face to Face Courses</label>
-            <label class="input-label" for="investment"><input type="checkbox" id="investment" name="checkbox"
-                  value="Experience with Little Investment" />
-               Experience with
-               Little Investment</label>
-         </form>
-      </section>
+         <select id="select-option" class="select-option-component form2">
+            <img src="./src/assets/poll.svg" />
+            <option value="I have not invested yet.">
+               I have not invested yet.
+            </option>
+            <option value="Low level of Funds">Low level of Funds</option>
+            <option value="Average level of Funds">Average level of Funds</option>
+            <option value="High level of Funds">High level of Funds</option>
+         </select>
+         <section>
+            <p class="question-text medium">What resources have you used or are you using for your training ?</p>
+            <form>
+               <label class="input-label" for="books"><input type="checkbox" id="books" name="checkbox"
+                     value="Books and Articles" /> Books and
+                  Articles</label>
+               <label class="input-label" for="tutorial"><input type="checkbox" id="tutorial" name="checkbox"
+                     value="Youtube Tutorial Videos" /> Youtube
+                  Tutorial Videos</label>
+               <label class="input-label" for="courses"><input type="checkbox" id="courses" name="checkbox"
+                     value="Online or Face to Face Courses" /> Online or
+                  Face to Face Courses</label>
+               <label class="input-label" for="investment"><input type="checkbox" id="investment" name="checkbox"
+                     value="Experience with Little Investment" />
+                  Experience with
+                  Little Investment</label>
+            </form>
+         </section>
+         <section class="side-buttons">
+            <button class="button side" id="back">
+               <p class="button-title side">Back</p>
+            </button>
+            <button class="button side" id="next">
+               <p class="button-title side">Next</p>
+            </button>
+         </section>
+         <button class="button large" id="button">
+            <p class="button-title side">Skip</p>
+         </button>
+      </footer>
    </main>
-   <footer class="footer">
-      <section class="side-buttons">
-         <button class="button side" id="back" onclick="navigation('poll')">
-            <p class="button-title side">Back</p>
-         </button>
-         <button class="button side" id="next">
-            <p class="button-title side">Next </p>
-         </button>
-      </section>
-      <button class="button large" id="button" onclick="navigation('details')">
-         <p class="button-title side">Skip</p>
-      </button>
-   </footer>
 </body>
 <script src="./dist/index.js" type="text/javascript"></script>
 
 </html>
+
+<!-- 
+<figcaption class="title-cover small">
+            How do you decide to invest?
+         </figcaption>
+         <select id="select-option" class="select-option-component">
+            <option value="I have not invested yet.">
+               I have not invested yet.
+            </option>
+            <option value="Low level of Funds">Low level of Funds</option>
+            <option value="Average level of Funds">Average level of Funds</option>
+            <option value="High level of Funds">High level of Funds</option>
+         </select>
+         <section class="form-container">
+            <p class="question-text medium">What resources have you used or are you using for your training ?</p>
+            <form class="form-inputs">
+               <label class="input-label" for="books"><input type="checkbox" id="books" name="checkbox"
+                     value="Books and Articles" /> Books and
+                  Articles</label>
+               <label class="input-label" for="tutorial"><input type="checkbox" id="tutorial" name="checkbox"
+                     value="Youtube Tutorial Videos" /> Youtube
+                  Tutorial Videos</label>
+               <label class="input-label" for="courses"><input type="checkbox" id="courses" name="checkbox"
+                     value="Online or Face to Face Courses" /> Online or
+                  Face to Face Courses</label>
+               <label class="input-label" for="investment"><input type="checkbox" id="investment" name="checkbox"
+                     value="Experience with Little Investment" />
+                  Experience with
+                  Little Investment</label>
+            </form>
+         </section>
+         <section class="side-buttons">
+            <button class="button side" id="back" onclick="navigation('poll')">
+               <p class="button-title side">Back</p>
+            </button>
+            <button class="button side" id="next">
+               <p class="button-title side">Next </p>
+            </button>
+         </section>
+         <button class="button large2" id="button" onclick="navigation('details')">
+            <p class="button-title side">Skip</p>
+         </button>
+
+-->

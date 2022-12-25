@@ -24,6 +24,13 @@ buttonNext === null || buttonNext === void 0 ? void 0 : buttonNext.addEventListe
     const checkbox = document.getElementsByName('checkbox');
     const select = document.getElementById('select-option');
     if (textarea) {
+        if (!textarea.value.length) {
+            textarea.classList.add('error');
+            setTimeout(() => {
+                textarea.classList.remove('error');
+            }, 500);
+            return;
+        }
         localStorage.setItem('details', String(textarea === null || textarea === void 0 ? void 0 : textarea.value));
         navigation('submit');
         return;
@@ -59,7 +66,7 @@ buttonSubmit === null || buttonSubmit === void 0 ? void 0 : buttonSubmit.addEven
     let retrievedData = {
         full_name: String(full_name === null || full_name === void 0 ? void 0 : full_name.value),
         email: String(email === null || email === void 0 ? void 0 : email.value),
-        age: String(age === null || age === void 0 ? void 0 : age.value),
+        age: Number(age === null || age === void 0 ? void 0 : age.value),
         markets: (_a = JSON.parse(String(localStorage.getItem('poll')))) === null || _a === void 0 ? void 0 : _a.markets,
         account_status: (_b = JSON.parse(String(localStorage.getItem('poll')))) === null || _b === void 0 ? void 0 : _b.status,
         invest_status: (_c = JSON.parse(String(localStorage.getItem('poll2')))) === null || _c === void 0 ? void 0 : _c.invest_status,
@@ -67,7 +74,6 @@ buttonSubmit === null || buttonSubmit === void 0 ? void 0 : buttonSubmit.addEven
         comment_detail: String(localStorage.getItem('details'))
     };
     localStorage.clear();
-    console.log(retrievedData);
 });
 function navigation(route) {
     window.location.href = `${route}.html`;
