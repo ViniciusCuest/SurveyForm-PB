@@ -7,7 +7,7 @@ A brief description of what this project does and how it works...
 
 Clone SurveyForm-PB with Git
 
-!important - Make sure your have installed Typescript Dependencies.
+! important - Make sure your have installed Typescript Dependencies.
 
 ```bash
    Access the folder - SurveyForm-PB
@@ -41,7 +41,7 @@ Clone SurveyForm-PB with Git
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/ViniciusCuest/SurveyForm-PB.git
 ```
 
 Go to the project directory
