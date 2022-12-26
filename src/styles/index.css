@@ -356,6 +356,9 @@ input[type="email"]:hover {
    width: 60vw;
    height: 8vh;
    border-radius: 20px;
+   animation: modal 2.2s ease-out;
+   transform: translateX(20vw);
+   margin-top: 2vh;
 }
 
 .double-button {
