@@ -84,7 +84,7 @@ buttonNext?.addEventListener('click', (): void => {
             resourses: data,
             invest_status: select?.value
          }));
-         
+
       if (data.length)
          navigation('details');
 
@@ -104,23 +104,22 @@ buttonSubmit?.addEventListener('click', (): void => {
       }, 1000);
    }
 
-   if (!email.value) {
+   if (!email.value || !email.value.match(/[^\s@]+@[^\s@]+\.[^\s@]+/)) {
       email.classList.add('error');
       setTimeout((): void => {
          email.classList.remove('error');
       }, 1000);
    }
 
-   if (!age.value) {
+   if (!age.value || Number(age.value) < 18) {
       age.classList.add('error');
       setTimeout((): void => {
          age.classList.remove('error');
       }, 1000);
    }
 
-   if (!full_name.value || !email.value || !age.value)
+   if (!full_name.value || !email.value || !age.value || Number(age.value) < 18 || !email.value.match(/[^\s@]+@[^\s@]+\.[^\s@]+/))
       return;
-
 
 
    let retrievedData: DataProps = {
@@ -134,18 +133,25 @@ buttonSubmit?.addEventListener('click', (): void => {
       comment_detail: String(localStorage.getItem('details'))
    };
 
+   full_name.value = '';
+   email.value = '';
+   age.value = '';
 
-   document.createElement(
-      `<section id="success effect" class="success-modal">
-         <p id="sucess-text">Be welcome, <b>${retrievedData.full_name.split(' ')[0]}!</></p>
-      </section>`
-   );
+   const modalElement: string =
+      `<section id="success" class="success-modal"> 
+         <p id="sucess-text">Be welcome, <b>${retrievedData.full_name.split(' ')[0]}!</></p> 
+      </section>`;
+
+   document.getElementById('wrapper')?.insertAdjacentHTML('beforeend', modalElement);
+
+   setTimeout(() => {
+      document.getElementById('success')?.remove();
+      localStorage.clear();
+      navigation('index');
+   }, 2000);
 
    //modalText.innerHTML = `Be welcome, <b>${retrievedData.full_name.split(' ')[0]}!</>`;
    //modal.classList.add('effect');
-
-   localStorage.clear();
-
 });
 
 

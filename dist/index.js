@@ -63,7 +63,7 @@ buttonNext === null || buttonNext === void 0 ? void 0 : buttonNext.addEventListe
     }
 });
 buttonSubmit === null || buttonSubmit === void 0 ? void 0 : buttonSubmit.addEventListener('click', () => {
-    var _a, _b, _c, _d;
+    var _a, _b, _c, _d, _e;
     const modal = document.getElementById('success');
     const modalText = document.getElementById('sucess-text');
     if (!full_name.value) {
@@ -72,19 +72,19 @@ buttonSubmit === null || buttonSubmit === void 0 ? void 0 : buttonSubmit.addEven
             full_name.classList.remove('error');
         }, 1000);
     }
-    if (!email.value) {
+    if (!email.value || !email.value.match(/[^\s@]+@[^\s@]+\.[^\s@]+/)) {
         email.classList.add('error');
         setTimeout(() => {
             email.classList.remove('error');
         }, 1000);
     }
-    if (!age.value) {
+    if (!age.value || Number(age.value) < 18) {
         age.classList.add('error');
         setTimeout(() => {
             age.classList.remove('error');
         }, 1000);
     }
-    if (!full_name.value || !email.value || !age.value)
+    if (!full_name.value || !email.value || !age.value || Number(age.value) < 18 || !email.value.match(/[^\s@]+@[^\s@]+\.[^\s@]+/))
         return;
     let retrievedData = {
         full_name: String(full_name === null || full_name === void 0 ? void 0 : full_name.value),
@@ -96,10 +96,19 @@ buttonSubmit === null || buttonSubmit === void 0 ? void 0 : buttonSubmit.addEven
         resourses: (_d = JSON.parse(String(localStorage.getItem('poll2')))) === null || _d === void 0 ? void 0 : _d.resourses,
         comment_detail: String(localStorage.getItem('details'))
     };
-    document.createElement(`<section id="success effect" class="success-modal">
-         <p id="sucess-text">Be welcome, <b>${retrievedData.full_name.split(' ')[0]}!</></p>
-      </section>`);
-    localStorage.clear();
+    full_name.value = '';
+    email.value = '';
+    age.value = '';
+    const modalElement = `<section id="success" class="success-modal"> 
+         <p id="sucess-text">Be welcome, <b>${retrievedData.full_name.split(' ')[0]}!</></p> 
+      </section>`;
+    (_e = document.getElementById('wrapper')) === null || _e === void 0 ? void 0 : _e.insertAdjacentHTML('beforeend', modalElement);
+    setTimeout(() => {
+        var _a;
+        (_a = document.getElementById('success')) === null || _a === void 0 ? void 0 : _a.remove();
+        localStorage.clear();
+        navigation('index');
+    }, 2000);
 });
 function navigation(route) {
     window.location.href = `${route}.html`;
