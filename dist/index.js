@@ -106,6 +106,8 @@ buttonSubmit === null || buttonSubmit === void 0 ? void 0 : buttonSubmit.addEven
     setTimeout(() => {
         var _a;
         (_a = document.getElementById('success')) === null || _a === void 0 ? void 0 : _a.remove();
+        localStorage.clear();
+        navigation('index');
     }, 2000);
 });
 function navigation(route) {

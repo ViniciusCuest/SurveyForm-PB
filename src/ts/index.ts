@@ -146,8 +146,8 @@ buttonSubmit?.addEventListener('click', (): void => {
 
    setTimeout(() => {
       document.getElementById('success')?.remove();
-      //localStorage.clear();
-      //navigation('index');
+      localStorage.clear();
+      navigation('index');
    }, 2000);
 
 });
